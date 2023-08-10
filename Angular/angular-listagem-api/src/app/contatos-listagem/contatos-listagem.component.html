@@ -20,3 +20,21 @@
     <hr>
   </li>
 </ul>
+
+<div *ngIf="contato">
+  <strong>CPF:</strong> {{ contato.cpf }}<br>
+  <strong>Nome:</strong> {{ contato.nome }}<br>
+  <strong>Email:</strong> {{ contato.email }}<br>
+  <strong>Cliente ID:</strong> {{ contato.cliente_id }}<br>
+  <strong>Endereço:</strong> <br>
+  <ul>
+    <li><strong>Endereço ID:</strong> {{ contato.endereco.endereco_id }}</li>
+    <li><strong>CEP:</strong> {{ contato.endereco.cep }}</li>
+    <li><strong>Estado:</strong> {{ contato.endereco.estado }}</li>
+    <li><strong>Cidade:</strong> {{ contato.endereco.cidade }}</li>
+    <li><strong>Bairro:</strong> {{ contato.endereco.bairro }}</li>
+    <li><strong>Rua:</strong> {{ contato.endereco.rua }}</li>
+    <li><strong>Número:</strong> {{ contato.endereco.numero }}</li>
+    <li><strong>Complemento:</strong> {{ contato.endereco.complemento || 'Nenhum' }}</li>
+  </ul>
+</div>
